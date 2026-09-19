@@ -1,0 +1,11 @@
+networks:
+  red-lab:
+    external: true
+
+services:
+  spa-landing:
+    build: .
+    container_name: spa-landing
+    networks:
+      - red-lab
+    restart: unless-stopped
